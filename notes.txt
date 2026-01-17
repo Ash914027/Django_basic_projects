@@ -1,0 +1,16 @@
+django
+
+python --version
+python -m venv env : to create virtual environment
+env\Scripts\activate :  to  activate  environment
+pip install django : to install django
+django-admin startproject myproject : to create a new project
+cd myproject : to change directory to the project folder
+python manage.py startapp home : to create a new app named 'home'
+python manage.py makemigrations : to create migrations for the app
+python manage.py runserver : to run the server
+python manage.py createsuperuser : to create a superuser
+
+
+
+
