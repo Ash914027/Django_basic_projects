@@ -1,16 +1,47 @@
-django
+📝 Django Apps Overview
+✅ To-Do App
+Features
 
+Task creation, update, and deletion
+
+User authentication (login & signup)
+
+Task prioritization
+
+Setup
 python --version
-python -m venv env : to create virtual environment
-env\Scripts\activate :  to  activate  environment
-pip install django : to install django
-django-admin startproject myproject : to create a new project
-cd myproject : to change directory to the project folder
-python manage.py startapp home : to create a new app named 'home'
-python manage.py makemigrations : to create migrations for the app
-python manage.py runserver : to run the server
-python manage.py createsuperuser : to create a superuser
+python -m venv env
+env\Scripts\activate
+pip install django
+django-admin startproject myproject
+cd myproject
+python manage.py startapp home
+python manage.py makemigrations
+python manage.py runserver
+python manage.py createsuperuser
 
+🎓 University App
+Features
 
+Course and enrollment management
 
+Student profile management
 
+Grades and performance tracking
+
+Setup
+python --version
+python -m venv env
+env\Scripts\activate
+pip install django
+django-admin startproject myproject
+cd myproject
+python manage.py startapp university
+python manage.py makemigrations
+python manage.py runserver
+python manage.py createsuperuser
+
+🚀 Conclusion
+
+This Markdown document covers the setup and features for both To-Do and University Django apps.
+You can now start building and extending them as needed. Happy Coding! 🎉
