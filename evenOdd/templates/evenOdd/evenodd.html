@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Odd Checker</title>
+</head>
+<body>
+    <h1>Even–Odd Checker</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Enter a number:</label>
+        <input type="number" name="number" required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <p><strong>{{ result }}</strong></p>
+    {% endif %}
+</body>
+</html>
