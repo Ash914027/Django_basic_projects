@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #444;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #b1bbf9ff;
+        }
+        tr:nth-child(odd) {
+            background: #ffffff;
+        }
+        .badge {
+            background: red;
+            color: white;
+            font-size: 0.8em;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Product List</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td>
+            {{ product.name }}
+            {% if product.price < 20 %}
+                <span class="badge">Sale</span>
+            {% endif %}
+        </td>
+        <td>${{ product.price }}</td>
+        <td>{{ product.category }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

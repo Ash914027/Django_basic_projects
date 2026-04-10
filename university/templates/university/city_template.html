@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Example</title>
+    <style>
+        .high { color: green; font-weight: bold; }
+        .low { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Display list of cities -->
+    <h2>Cities</h2>
+    <ul>
+        {% for city in cities %}
+            <li>{{ city }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- 2. Template Filters -->
+    <h2>Template Filters</h2>
+    <p>Today's Date: {{ today|date:"l, j F Y" }}</p>
+    <p>Name in Title Case: {{ name|title }}</p>
+
+    <!-- 3. Student Marks -->
+    <h2>Student Marks</h2>
+    <ul>
+        {% for student in students %}
+            <li>
+                {{ student.name }} - 
+                {% if student.marks > 90 %}
+                    <span class="high">{{ student.marks }}</span>
+                {% elif student.marks < 50 %}
+                    <span class="low">{{ student.marks }}</span>
+                {% else %}
+                    {{ student.marks }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

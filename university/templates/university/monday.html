@@ -1,0 +1,17 @@
+{% extends 'university/base.html' %}
+
+{% block content %}
+    <h2>{{ day }}'s Classes</h2>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Subject</th>
+        </tr>
+        {% for c in classes %}
+        <tr>
+            <td>{{ c.time }}</td>
+            <td>{{ c.subject }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
